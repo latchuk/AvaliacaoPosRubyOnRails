@@ -1,6 +1,16 @@
+<p></p>
+
 <h1>Editing List</h1>
 
-<%= render 'form' %>
+<div class="card">
+  <div class="card-body">
 
-<%= link_to 'Show', @list %> |
-<%= link_to 'Back', lists_path %>
+    <%= render 'form' %>
+
+</div>
+</div>
+
+<br/>
+
+<%= link_to 'Show', @list, class: 'btn btn-secondary' %>
+<%= link_to 'Back', lists_path, class: 'btn btn-secondary' %>
