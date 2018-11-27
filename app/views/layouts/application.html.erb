@@ -6,9 +6,25 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
-<%= yield %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Shop List</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <%= link_to 'Lists', lists_path, class: 'nav-item nav-link' %>
+      <%= link_to 'Items', items_path, class: 'nav-item nav-link' %>
+    </ul>
+  </div>
+</nav>
+
+<main class="container" role="main">
+  <%= yield %>
+</main>
 
 </body>
 </html>
